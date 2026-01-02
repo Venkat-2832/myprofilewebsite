@@ -1,32 +1,44 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useState, useEffect } from "react";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import data from "../data/data.json";
+import "./Skills.css";
 
-function Skills() {
+const Skills = () => {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    const fetchSkills = async () => {
-      try {
-        const res = await axios.get("http://localhost:5000/skills");
-        setSkills(res.data);
-      } catch (error) {
-        console.error("Error fetching skills:", error);
-      }
-    };
-
-    fetchSkills();
+    // Extract skills from data.json
+    setSkills(data.Skills || []);
   }, []);
 
   return (
-    <div>
-      <h2>Skills</h2>
-      <ul>
-        {skills.map(skill => (
-          <li key={skill.id}>{skill.skill_name}</li>
+    <Box className="skills-container">
+      <Typography variant="h3" className="skills-title fade-in">
+        My Skills
+      </Typography>
+
+      <Box className="skills-grid">
+        {skills.map((skill, index) => (
+          <Box key={index} className="skill-card fade-in delay" style={{ animationDelay: `${index * 0.2}s` }}>
+            {/* {skill.image && (
+              <img
+                src={require(`../assets/${skill.image}`)}
+                alt={skill.skillname}
+                className="skill-image"
+              />
+            )} */}
+            <Typography variant="h5" className="skill-name">
+              {skill.skillname}
+            </Typography>
+            <Typography variant="body2" className="skill-description">
+              {skill.discription}
+            </Typography>
+          </Box>
         ))}
-      </ul>
-    </div>
+      </Box>
+    </Box>
   );
-}
+};
 
 export default Skills;

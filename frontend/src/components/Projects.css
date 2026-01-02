@@ -1,0 +1,104 @@
+.projects-container {
+  padding: 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Title */
+.projects-title {
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ✅ GRID: 2 columns */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 11000px;
+  margin: 0 auto;
+}
+
+/* Card */
+.project-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.app.dark .project-card {
+  background-color: #1e1e1e;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* Title */
+.project-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #0a58ff;
+}
+
+/* Description */
+.project-description {
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.app.dark .project-description {
+  color: #d1d1d1;
+}
+
+/* Tech stack */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-chip {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: linear-gradient(90deg, #0a58ff, #00b4ff);
+  color: white;
+}
+
+/* Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-container {
+    padding: 60px 20px;
+  }
+}

@@ -1,0 +1,93 @@
+.skills-container {
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Title */
+.skills-title {
+  text-align: center;
+  font-weight: 700;
+  color: #0a58ff;
+  margin-bottom: 20px;
+}
+
+/* Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Skill Card */
+.skill-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app.dark .skill-card {
+  background-color: #1e1e1e;
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.05);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Skill Image */
+.skill-image {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+/* Skill Name */
+.skill-name {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #0a58ff;
+}
+
+/* Description */
+.skill-description {
+  font-size: 0.9rem;
+  color: #555555;
+}
+
+.app.dark .skill-description {
+  color: #d1d1d1;
+}
+
+/* Fade + slide animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.delay {
+  /* animationDelay is inline from component for stagger effect */
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .skills-container {
+    padding: 60px 20px;
+  }
+}

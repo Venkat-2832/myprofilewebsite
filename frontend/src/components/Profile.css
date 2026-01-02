@@ -1,0 +1,77 @@
+/* Container */
+.profile-container {
+  padding: 120px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  /* reserve vertical space to prevent jump */
+  min-height: 500px; /* adjust depending on your text */
+}
+
+.profile-left, .profile-container {
+  min-height: 300px; /* ensures TypeWriter doesn't push content */
+}
+
+/* Fade + slide animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.4s;
+}
+
+.delay-2 {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Name highlight glow */
+.name {
+  font-weight: 700;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Name text */
+.app.light .name {
+  background: linear-gradient(90deg, #0a58ff, #00b4ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Summary text */
+.summary {
+  max-width: 600px;
+  line-height: 1.6;
+  color: #282727;
+}
+
+.app.dark .summary {
+  color: #d1d1d1;
+}
+
+/* Blinking cursor */
+.cursor {
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}

@@ -1,20 +1,46 @@
-// import logo from './logo.svg';
-import './App.css';
-import Header from './components/Header';
-import Skills from './components/Skills';
-import MouseTrail from './Utils/MouseTrail';
-import { useContext } from 'react';
-import { ThemeContext } from './context/ThemeContext';
+import React, { useContext } from "react";
+import Header from "./components/Header";
+import MouseTrail from "./Utils/MouseTrail";
+import { ThemeContext } from "./context/ThemeContext";
+import Profile from "./components/Profile";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Experience from "./components/Experience";
+import SectionDivider from "./Utils/SectionDivider";
 
 function App() {
   const { theme } = useContext(ThemeContext);
 
   return (
     <div className={`app ${theme}`}>
-      <MouseTrail/>
-      <Header/>
-      <h1>My Profile Website</h1>
-      {/* <Skills /> */}
+      <MouseTrail />
+      <Header />
+
+      <section id="about">
+        <Profile/>
+      </section>
+
+      <SectionDivider />
+
+      <section id="skills">
+        <Skills/>
+      </section>
+
+      <SectionDivider />
+
+      <section id="projects">
+        <Projects />
+      </section>
+      <SectionDivider />
+
+      <section id="experience">
+        <Experience/>
+      </section>
+      <SectionDivider />
+
+      <section id="resume">
+        <h2>Resume</h2>
+      </section>
     </div>
   );
 }

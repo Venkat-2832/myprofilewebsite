@@ -1,17 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 #root {
-    background-color: #000000;
+    /* background-color: #000000; */
+    margin: 0;
 }
 
 .app {
-  min-height: 100vh;
-  padding: 0px, 0px, 10px;
+  min-height: 100vh; 
+  padding: 0px, 0px, 10px; 
   transition: all 0.3s ease;
+  /* padding: 0; */
+  background-color: aqua;
 
 }
 
 /* Light Theme */
 .app.light {
-  background-color: #ffffff;
+  background-color: #f0ece9;
   color: #000000;
 }
 
@@ -26,4 +40,15 @@ button {
   border: none;
   cursor: pointer;
   border-radius: 6px;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  min-height: 70vh;
+  padding: 80px 20px;
+  scroll-margin-top: 110px;
 }

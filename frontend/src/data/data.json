@@ -1,0 +1,71 @@
+{
+    "name": "Venkat Sai",
+    "personalDetails": [
+        {
+            "name": "Venkat Sai"
+        },
+        {
+            "role": "Full Stack Developer"
+        },
+        {
+            "email": "a.venkatsai1234@gmail.com"
+        },
+        {
+            "discription": "I am a Frontend Developer with hands-on experience in building responsive and user-friendly web applications using React and modern UI frameworks. I also have experience in backend development with Node.js, Express.js, and PostgreSQL, allowing me to create full-stack solutions and handle data efficiently."
+        }
+    ],
+    "Skills": [
+        {
+            "skillname": "JavaScript",
+            "discription": "Proficient in JavaScript ES6+ features and concepts.",
+            "image": "javascript.png"
+        },
+        {
+            "skillname": "React.js",
+            "discription": "Experienced in building user interfaces with React and modern UI frameworks."
+        },
+        {
+            "skillname": "Node.js",
+            "discription": "Skilled in backend development using Node.js and Express.js.",
+            "image": "nodejs.png"
+        },
+        {
+            "skillname": "PostgreSQL",
+            "discription": "Knowledgeable in database design and management using PostgreSQL.",
+            "image": "postgresql.png"
+        },
+        {
+            "skillname": "Git & GitHub",
+            "discription": "Familiar with version control and collaboration tools.",
+            "image": "github.png"
+        },
+        {
+            "skillname": "Postman",
+            "discription": "Proficient in API testing and development using Postman.",
+            "image": "postman.png"
+        }
+    ],
+    "projectDetails": [
+        {
+            "title": "Personal Portfolio Website",
+            "description": "A personal portfolio website to showcase my projects and skills. Built using React for the frontend and Node.js with Express for the backend. The website features a responsive design, interactive elements, and a contact form that sends messages directly to my email.",
+            "technologies": ["React", "Node.js", "Express", "CSS", "HTML"]
+        },
+        {
+            "title": "Spec-Generator",
+            "description": "A web application that generates LS-G codes autonomously based on user inputs. The frontend is built with React, providing a user-friendly interface, while the backend utilizes Node.js and Express to handle code generation logic and data processing. The application also integrates PostgreSQL for storing user data and generated codes.",
+            "technologies": ["React", "Node.js", "Express", "PostgreSQL", "CSS", "Postman"]
+        },
+        {
+            "title": "Regression Analysis Machine Learning with Python",
+            "description": "Developed a regression analysis project utilizing key concepts in Python, including NumPy and Pandas. Utilized machine learning techniques to perform regression analysis on a dataset, extracting insights and making predictions based on the data.",
+            "technologies": ["Python", "Pandas", "NumPy", "Scikit-learn"]
+        },
+        {
+            "title": "Designed a Butterworth Filter",
+            "description": "Designed a Butterworth filter signal in digital Signal Processing to generate output by taking user inputs Using python",
+            "technologies": ["Python", "Signal Processing"]
+        }
+    ]
+    
+}

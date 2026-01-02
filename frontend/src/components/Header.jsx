@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -9,6 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "@mui/material/Drawer";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { ThemeContext } from "../context/ThemeContext";
+// import data from "../data/data.json";
 
 const menuItems = ["About", "Skills", "Projects", "Experience", "Resume"];
 
@@ -16,30 +17,68 @@ const Header = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const isMobile = useMediaQuery("(max-width:900px)");
   const [open, setOpen] = useState(false);
+  const [title, setTitle] = useState("Move Cursor");
+
+  // observe the Profile section (#about) and update title
+  useEffect(() => {
+    const about = document.getElementById("about");
+    if (!about) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTitle("WELCOME");
+          } else {
+            setTitle("Venkat Sai");
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+    observer.observe(about);
+    return () => observer.disconnect();
+  }, []);
+
+  // ✅ Smooth scroll on click
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
 
   return (
     <>
       <AppBar
-        position="static"
+        position="fixed"
+        elevation={1}
         sx={{
-          backgroundColor: theme === "light" ? "#fff" : "#1e1e1e",
-          color: theme === "light" ? "#000" : "#fff",
+          backgroundColor: theme === "light" ? "#ffffff" : "#1e1e1e",
+          color: theme === "light" ? "#000000" : "#ffffff",
         }}
       >
         <Toolbar>
-          {/* Left text */}
-          <Typography variant="h5" sx={{ flexGrow: 1 }}>
-            Move Cursor
+          {/* Left Logo / Text */}
+          <Typography variant="h5" sx={{ flexGrow: 1, fontWeight: 600 }} color="#0a58ff">
+            {title}
           </Typography>
 
           {/* Desktop Menu */}
           {!isMobile && (
             <Box sx={{ display: "flex", gap: 2 }}>
-              {menuItems.map(item => (
-                <Button key={item} color="inherit">
+              {menuItems.map((item) => (
+                <Button
+                  key={item}
+                  color="inherit"
+                  onClick={() => scrollToSection(item.toLowerCase())}
+                >
                   {item}
                 </Button>
               ))}
+
               <Button color="inherit" onClick={toggleTheme}>
                 {theme === "light" ? "Dark" : "Light"}
               </Button>
@@ -60,17 +99,25 @@ const Header = () => {
         <Box
           sx={{
             width: 250,
-            padding: 2,
-            backgroundColor: theme === "light" ? "#fff" : "#1e1e1e",
             height: "100%",
+            p: 2,
+            backgroundColor: theme === "light" ? "#ffffff" : "#1e1e1e",
+            color: theme === "light" ? "#000000" : "#ffffff",
           }}
         >
-          {menuItems.map(item => (
+          {menuItems.map((item) => (
             <Button
               key={item}
               fullWidth
-              sx={{ justifyContent: "flex-start", mb: 1 }}
-              onClick={() => setOpen(false)}
+              sx={{
+                justifyContent: "flex-start",
+                mb: 1,
+                color: "inherit",
+              }}
+              onClick={() => {
+                scrollToSection(item.toLowerCase());
+                setOpen(false);
+              }}
             >
               {item}
             </Button>
