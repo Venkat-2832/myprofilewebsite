@@ -15,7 +15,7 @@ const Skills = () => {
   return (
     <Box className="skills-container">
       <Typography variant="h3" className="skills-title fade-in">
-        My Skills
+        Skills
       </Typography>
 
       <Box className="skills-grid">
