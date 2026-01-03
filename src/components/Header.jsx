@@ -11,7 +11,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { ThemeContext } from "../context/ThemeContext";
 // import data from "../data/data.json";
 
-const menuItems = ["About", "Skills", "Projects", "Experience", "Resume"];
+const menuItems = ["About", "Skills", "Projects", "Experience", "Contact"];
 
 const Header = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);

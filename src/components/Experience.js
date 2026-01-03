@@ -22,11 +22,10 @@ const Experience = () => {
         {/* LEFT CARD – EXPERIENCE */}
         {experience.map((exp, index) => (
           <Box key={index} className="experience-card fade-in">
-            <Typography variant="h5" className="company-name">
-              {exp.company}
+            <Typography variant="h5" className="company-name" style={{fontFamily:"Mediator Narrow Extra Bold"}}>
+              {exp.company} {<span className="dot" style={{ color: "#86BC25",  }}>{exp.dot}</span>}
             </Typography>
-
-            <Typography variant="subtitle1" className="role-duration">
+            <Typography variant="subtitle1" className="role-duration" mt={2}>
               {exp.role} • {exp.duration}
             </Typography>
 

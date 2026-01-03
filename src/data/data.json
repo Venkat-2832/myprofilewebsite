@@ -74,6 +74,7 @@
     "experienceDetails": [
         {
             "company": "Deloitte USI",
+            "dot":".",
             "role": "Frontend Developer",
             "duration": "Feb 2025 - Present",
             "responsibilities": [
@@ -86,6 +87,19 @@
                 "postman for API testing and development."
             ]
         }
+    ],
+    "contactDetails": [
+        {
+            "email": "a.venkatsai1234@gmail.com",
+            "emailImage": "email.png"
+        },
+        {
+            "linkedIn":"https://www.linkedin.com/in/venkat-sai-ausali-6220371b6/",
+            "linkedInImage":"linkedin.png"
+        },
+        {
+            "resume":"https://drive.google.com/file/d/1KX1Yk1b2b2b2b2b2b2b2b2b2b2b2b2b/view?usp=sharing",
+            "resumeImage":"resume.png"
+        }
     ]
-    
 }

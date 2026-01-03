@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import SectionDivider from "./Utils/SectionDivider";
+import Contact from "./components/Contact";
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -37,7 +38,7 @@ function App() {
       <SectionDivider />   
 
       <section id="resume">
-        <h2>Resume</h2>
+        <Contact />
       </section>
     </div>
   );
