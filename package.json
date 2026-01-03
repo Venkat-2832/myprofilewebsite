@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage": "https://venkatsai.github.io/myprofilewesite",
+  "homepage": "https://Venkat-2832.github.io/myprofilewebsite",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",
