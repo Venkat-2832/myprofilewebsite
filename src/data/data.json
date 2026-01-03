@@ -12,7 +12,11 @@
         },
         {
             "discription": "I am a Frontend Developer with hands-on experience in building responsive and user-friendly web applications using React and modern UI frameworks. I also have experience in backend development with Node.js, Express.js, and PostgreSQL, allowing me to create full-stack solutions and handle data efficiently."
+        },
+        {
+            "skill": "Frontend Developer • React • JavaScript • MUI • HTML • CSS • Backend Developer • Node.js • Express.js • PostgreSQL"
         }
+
     ],
     "Skills": [
         {
@@ -65,6 +69,22 @@
             "title": "Designed a Butterworth Filter",
             "description": "Designed a Butterworth filter signal in digital Signal Processing to generate output by taking user inputs Using python",
             "technologies": ["Python", "Signal Processing"]
+        }
+    ],
+    "experienceDetails": [
+        {
+            "company": "Deloitte USI",
+            "role": "Frontend Developer",
+            "duration": "Feb 2025 - Present",
+            "responsibilities": [
+                "Developed and maintained web applications using React.js, next.js and modern UI frameworks.",
+                "Developed a msal authentication module for secure user login and access control.",
+                "Collaborated with backend developers to integrate APIs and ensure seamless data flow.",
+                "Worked in backend development using Node.js and Express.js for creating RESTful APIs. etc..",
+                "PostgreSQL for database management and data retrieval.",
+                "Utilized Git and GitHub for version control and collaboration within the development team.",
+                "postman for API testing and development."
+            ]
         }
     ]
     

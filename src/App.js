@@ -19,13 +19,11 @@ function App() {
       <section id="about">
         <Profile/>
       </section>
-
       <SectionDivider />
 
-      <section id="skills">
-        <Skills/>
+       <section id="experience">
+        <Experience/>
       </section>
-
       <SectionDivider />
 
       <section id="projects">
@@ -33,10 +31,10 @@ function App() {
       </section>
       <SectionDivider />
 
-      <section id="experience">
-        <Experience/>
+      <section id="skills">
+        <Skills/>
       </section>
-      <SectionDivider />
+      <SectionDivider />   
 
       <section id="resume">
         <h2>Resume</h2>

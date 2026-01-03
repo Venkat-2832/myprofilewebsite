@@ -10,10 +10,12 @@ const Profile = () => {
 
   const [showRole, setShowRole] = useState(false);
   const [showSummary, setShowSummary] = useState(false);
+  const [showSkills, setShowSkills] = useState(false);
 
     const name = data.name;
     const role = data.personalDetails.find(item => item.role)?.role;
     const discription = data.personalDetails.find(item => item.discription)?.discription;
+    const skill = data.personalDetails.find(item => item.skill)?.skill;
 
   return (
     <Box className="profile-container">
@@ -44,9 +46,25 @@ const Profile = () => {
             text={`${discription}`}
             speed={20}
             showCursor={false}
+            onComplete={()=>setShowSkills(true)}
+
           />
         </Typography>
       )}
+
+      {/* Skills */}
+      {showSkills && (
+        <Box className="fade-in delay-3" fontSize={18} >
+          <TypeWriter
+            text={`${skill}`}
+            speed={50}
+            showCursor={false}
+            // setShowSkills={false}
+          />
+        </Box>
+      )}
+
+
     </Box>
   );
 };
